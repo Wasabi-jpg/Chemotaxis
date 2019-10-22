@@ -7,7 +7,7 @@
  	size(500,500);
 
  	//initialize bacteria variables here
- 	colony = new Bacteria [1000];
+ 	colony = new Bacteria [200];
  	for(int i = 0; i<colony.length;i++){
  		colony[i] = new Bacteria();
  	}
@@ -29,8 +29,9 @@
  	//lots of java!
  	int myX, myY, theColor;
  	Bacteria(){
- 		myX = x;
- 		myY = y;
+ 		myX = 250;
+ 		myY = 250;
+
  		theColor = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
 
  	}
@@ -43,17 +44,23 @@
 	void move(){
 		myX = myX + (int)(Math.random()*7)-3;
 		myY = myY + (int)(Math.random()*7)-3;
-		if(mouseX>x){
+		if(mouseX>myX){
 			myX = myX + (int)(Math.random()*7)-1;
+			x++;
 		}else{
 			myX = myX +(int)(Math.random()*7)-5;
+			x--;
 		}
-		if(mouseY>y){
+		if(mouseY>myY){
 			myY = myY + (int)(Math.random()*7)-1;
+			y++;
 		}else{
 			myY = myY + (int)(Math.random()*7)-5;
+			y--;
 		}
 
+
 	}
+
 
  }    
