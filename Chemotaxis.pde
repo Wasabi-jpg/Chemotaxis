@@ -26,7 +26,7 @@
  	} 
  	fill(255);
  	ellipse(x,y,25,25);
- 	System.out.println(x+", " + y);
+ 	
  	
  }  
  class Bacteria    
