@@ -44,7 +44,7 @@
  		stroke(theColor);
 
  		fill(theColor);
- 		ellipse(myX, myY, .5, .5);
+ 		ellipse(myX, myY, 1, 1);
  	}
 	void move(){
 		myX = myX + (int)(Math.random()*7)-3;
